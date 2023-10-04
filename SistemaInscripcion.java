@@ -12,8 +12,6 @@ public class SistemaInscripcion {
 
         System.out.println("\n---------- Sistema de Inscripcion ----------\n");
         do {
-            Profesor prof;
-            Asignatura asig;
             System.out.println("\n--------------- Crear Grupo --------------");
             System.out.print("\n1. Agregar Profesor\n2. Agregar Asignatura");
             System.out.print("\nOpcion: ");
