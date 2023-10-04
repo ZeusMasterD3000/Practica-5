@@ -1,10 +1,9 @@
 public class Grupo {
     
+    private Asignatura materia;
+    private Profesor profe;
+    private Alumno[] alumnos = new Alumno[40];
     private int no_grupo;
-    Profesor profe;
-    Asignatura materia;
-    private Alumno alum;
-    Alumno[] alumnos = new Alumno[40];
 
     public Grupo(Profesor profe, Asignatura materia, int no_grupo){
         this.profe = profe;
