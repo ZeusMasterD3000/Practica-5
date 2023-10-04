@@ -9,7 +9,7 @@ public class SistemaInscripcion {
         Scanner sc = new Scanner(System.in);
         ArrayList<Asignatura> grupos = new ArrayList<>();
         ArrayList<Profesor> profes = new ArrayList<>();
-        ArrayList<Alumnos> alumnos = new ArrayList<>();
+        ArrayList<Alumno> alumnos = new ArrayList<>();
         ArrayList<Grupo> grupos = new ArrayList<>();
         Grupo group;
 
