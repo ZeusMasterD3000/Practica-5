@@ -35,5 +35,12 @@ public class Asignatura {
         return contAsig;
     }
 
+    public void ImprimirDatos(){
+        System.out.println("---------- Datos Asignatura ---------\n");
+        System.out.println("Nombre: "+ getNameAsig());
+        System.out.println("Carrera: "+ getCarreraAsig());
+        System.out.println("Clave: "+ getClave());      
+    }
+
 
 }
