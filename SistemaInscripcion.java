@@ -7,7 +7,10 @@ public class SistemaInscripcion {
         int contP = 0;
         int contA = 0;
         Scanner sc = new Scanner(System.in);
-        ArrayList<Grupo> grupos = new ArrayList<Grupo>();
+        ArrayList<Asignatura> grupos = new ArrayList<>();
+        ArrayList<Profesor> profes = new ArrayList<>();
+        ArrayList<Alumnos> alumnos = new ArrayList<>();
+        ArrayList<Grupo> grupos = new ArrayList<>();
         Grupo group;
 
         System.out.println("\n---------- Sistema de Inscripcion ----------\n");
