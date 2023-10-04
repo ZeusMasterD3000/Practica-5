@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 public class Alumno {
-    
+
     private String nombre_alu;
     private String no_cuenta;
     private float prom;
@@ -45,4 +45,5 @@ public class Alumno {
             System.out.println("Cuenta: "+ getNoCuenta());
         }
     }
+    
 }
