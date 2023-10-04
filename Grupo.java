@@ -1,4 +1,5 @@
 public class Grupo {
+    
     private int no_grupo;
     Profesor profe;
     Asignatura materia;

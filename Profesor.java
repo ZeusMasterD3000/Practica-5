@@ -1,4 +1,5 @@
 public class Profesor {
+    
     private String nombreProf;
     private String carreraProf;
     private String horario;
