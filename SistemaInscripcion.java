@@ -12,6 +12,30 @@ public class SistemaInscripcion {
 
         System.out.println("\n---------- Sistema de Inscripcion ----------\n");
         do {
+            System.out.println("Elige una opcion: ");
+            System.out.println("1. Crear Grupo");
+            System.out.println("2. Crear Profesor");
+            System.out.println("3. Crear Alumno");
+            System.out.println("4. Crear Asignatura");
+            System.out.print("Opcion: ");
+            int op = sc.nextInt();
+            
+            switch(op){
+                case 1: //Crear grupo
+                    
+                    break;
+                case 2://Crear Profesor
+
+                    break;
+                case 3://Crear Alumno
+
+                    break;
+                case 4://Crear Asignatura
+
+                    break;
+
+
+            }
             Profesor prof;
             Asignatura asig;
             
