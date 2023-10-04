@@ -7,7 +7,7 @@ public class SistemaInscripcion {
         int contP = 0;
         int contA = 0;
         Scanner sc = new Scanner(System.in);
-        ArrayList<Asignatura> grupos = new ArrayList<>();
+        ArrayList<Asignatura> asignatura = new ArrayList<>();
         ArrayList<Profesor> profes = new ArrayList<>();
         ArrayList<Alumno> alumnos = new ArrayList<>();
         ArrayList<Grupo> grupos = new ArrayList<>();
