@@ -22,7 +22,62 @@ public class SistemaInscripcion {
             
             switch(op){
                 case 1: //Crear grupo
-                    
+                    Profesor prof;
+                    Asignatura asig;
+                    System.out.println("\n--------------- Crear Grupo --------------");
+                    System.out.print("\nAgrega al profesor:");
+                    System.out.println("\n--------------- Profesor ---------------");
+                    System.out.print("\nNombre: ");
+                    String nameP = sc.nextLine();
+                    System.out.print("\nCarrera: ");
+                    String ing = sc.nextLine();
+                    System.out.print("\nHorario: ");
+                    String hora = sc.nextLine();
+                    prof = new Profesor(nameP, ing, hora);
+                    System.out.print("\nAgrega la asignatura:");
+                    System.out.println("\n--------------- Asignatura ---------------");
+                    System.out.print("\nNombre: ");
+                    String nameA = sc.nextLine();
+                    System.out.print("\nCarrera: ");
+                    String carAsi = sc.nextLine();
+                    System.out.print("\nClave: ");
+                    String clave = sc.nextLine();
+                    asig = new Asignatura(nameA, carAsi, clave);
+                    System.out.print("\nAgrega el numero del grupo:");
+                    System.out.println("\n--------------- No. Grupo ---------------");
+                    int noGrupo = sc.nextInt();
+
+                    // System.out.print("\n1. Agregar Profesor\n2. Agregar Asignatura");
+                    // System.out.print("\nOpcion: ");
+                    // op = sc.nextInt();
+                    // sc.next();
+                    // switch (op) {
+                    //     case 1:
+                    //         System.out.println("\n--------------- Profesor ---------------");
+                    //         System.out.print("\nNombre: ");
+                    //         String nameP = sc.nextLine();
+                    //         System.out.print("\nCarrera: ");
+                    //         String ing = sc.nextLine();
+                    //         System.out.print("\nHorario: ");
+                    //         String hora = sc.nextLine();
+                    //         prof = new Profesor(nameP, ing, hora);
+                    //         break;
+                    //     case 2:
+                    //         System.out.println("\n--------------- Asignatura ---------------");
+                    //         System.out.print("\nNombre: ");
+                    //         String nameA = sc.nextLine();
+                    //         System.out.print("\nCarrera: ");
+                    //         String carAsi = sc.nextLine();
+                    //         System.out.print("\nClave: ");
+                    //         String clave = sc.nextLine();
+
+                    //         asig = new Asignatura(nameA, carAsi, clave);
+
+                    //         break;
+                    //     default:
+                    //         System.out.println("\n!!! ERROR !!! Opcion Inválida ..........");
+                    //         break;
+                    // }
                     break;
                 case 2://Crear Profesor
 
@@ -36,44 +91,9 @@ public class SistemaInscripcion {
 
 
             }
-            Profesor prof;
-            Asignatura asig;
             
-            System.out.println("\n--------------- Crear Grupo --------------");
-            System.out.print("\n1. Agregar Profesor\n2. Agregar Asignatura");
-            System.out.print("\nOpcion: ");
-            int op = sc.nextInt();
-            sc.next();
-
-            switch (op) {
-                case 1:
-                    System.out.println("\n--------------- Profesor ---------------");
-                    System.out.print("\nNombre: ");
-                    String nameP = sc.nextLine();
-                    System.out.print("\nCarrera: ");
-                    String ing = sc.nextLine();
-                    System.out.print("\nHorario: ");
-                    String hora = sc.nextLine();
-
-                    prof = new Profesor(nameP, ing, hora);
-
-                    break;
-                case 2:
-                    System.out.println("\n--------------- Asignatura ---------------");
-                    System.out.print("\nNombre: ");
-                    String nameA = sc.nextLine();
-                    System.out.print("\nCarrera: ");
-                    String carAsi = sc.nextLine();
-                    System.out.print("\nClave: ");
-                    String clave = sc.nextLine();
-
-                    asig = new Asignatura(nameA, carAsi, clave);
-
-                    break;
-                default:
-                    System.out.println("\n!!! ERROR !!! Opcion Inválida ..........");
-                    break;
-            }
+            
+            
             if(contP == 1 && contA == 1){
                 Random num = new Random(20);
                 num = num.RandomInt()
