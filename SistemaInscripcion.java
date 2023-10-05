@@ -156,6 +156,10 @@ public class SistemaInscripcion {
                     contAsig ++;
 
                     break;
+
+                case 5:
+                    sc.close();
+                    return;
             }
 
         } while (opcion != 5);
