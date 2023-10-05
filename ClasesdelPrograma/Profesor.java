@@ -32,10 +32,6 @@ public class Profesor {
         this.horario = horario;
     }
 
-    public int getCont(){
-        return contProf;
-    }
-
     public void ImprimirDatos(){
         System.out.println("---------- Datos Profesor ---------\n");
         System.out.println("Nombre: "+ getNameP());

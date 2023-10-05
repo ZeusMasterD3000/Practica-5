@@ -31,11 +31,6 @@ public class Asignatura {
         this.clave = clave;
     }
 
-    //Metodo de la clase
-    public int getCont(){
-        return contAsig;
-    }
-
     public void ImprimirDatos(){
         System.out.println("---------- Datos Asignatura ---------\n");
         System.out.println("Nombre: "+ getNameAsig());

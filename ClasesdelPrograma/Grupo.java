@@ -38,15 +38,16 @@ public class Grupo {
     public int getNo_Grupo(){
         return no_grupo;
     }
-    public int getCont(){
-        return cont;
-    }
 
     public void Imprimir(){
         System.out.println("---------- Datos del Grupo "+ getNo_Grupo() +" ----------\n");
-        System.out.println("Materia: "+ getAsignatura().getNameAsig());
-        System.out.println("Carrera: "+ getAsignatura().getCarreraAsig());
-        System.out.println("Profesor: "+ getProfesor().getNameP());
-        System.out.println("Horario: "+ getProfesor().getHorario());
+        materia.ImprimirDatos();
+        profe.ImprimirDatos();
+        int i = 1;
+        for(Alumno alu : alumnos){
+            System.out.println("\n---------- Alumno "+ i +" ----------");
+            alu.Imprimir();
+            i ++;
+        }
     }
 }
