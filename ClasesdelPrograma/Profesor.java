@@ -1,3 +1,4 @@
+package ClasesdelPrograma;
 public class Profesor {
     
     private String nombreProf;

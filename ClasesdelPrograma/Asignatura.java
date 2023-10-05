@@ -1,3 +1,4 @@
+package ClasesdelPrograma;
 public class Asignatura {
 
     // Atributos o miembros
