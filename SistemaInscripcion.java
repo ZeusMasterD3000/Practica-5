@@ -124,7 +124,7 @@ public class SistemaInscripcion {
                         promedio = sc.nextFloat();
                         alumno = new Alumno(nameAl, noCuenta, promedio);
                         alumnos.add(alumno);
-
+                        
                         System.out.println("\n--------------- Grupos ---------------");
                         for(int j = 0; j < asignaturas.size(); j++){
                             System.out.println("---------- Opcion "+ (j+1) +" ----------");
@@ -135,7 +135,7 @@ public class SistemaInscripcion {
                         System.out.println("Opcion: ");
                         opcionMenu = sc.nextInt();
                         group = grupos.get(opcionMenu);
-                        //group.asignarAlumnos();
+                        group.setAlumno(alumno);
 
                     }else{
                         System.out.println("\n... .... ... Falta crear un Grupo ... .... ...\n");
