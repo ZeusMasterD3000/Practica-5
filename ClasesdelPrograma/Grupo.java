@@ -38,9 +38,6 @@ public class Grupo {
     public int getNo_Grupo(){
         return no_grupo;
     }
-    public int getCont(){
-        return cont;
-    }
 
     public void Imprimir(){
         System.out.println("---------- Datos del Grupo "+ getNo_Grupo() +" ----------\n");
