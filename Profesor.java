@@ -31,7 +31,7 @@ public class Profesor {
         this.horario = horario;
     }
 
-    public static int getCont(){
+    public int getCont(){
         return contProf;
     }
 

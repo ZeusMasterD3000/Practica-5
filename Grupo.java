@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Grupo {
     
     // Atributos o miembros de clase
@@ -7,14 +5,14 @@ public class Grupo {
     private Profesor profe;
     private Alumno[] alumnos = new Alumno[5];
     private int no_grupo;
-    private int cont;
+    static int cont = 0;
 
     // Constructor
     public Grupo(Profesor profe, Asignatura materia, int no_grupo){
         this.profe = profe;
         this.materia = materia;
         this.no_grupo = no_grupo; 
-        cont = 0;
+        cont ++;
     }
 
     // Métodos del objeto
@@ -27,24 +25,14 @@ public class Grupo {
     public Alumno[] getAlumnos(){
         return alumnos;
     }
+    // public void setAlumno(Alumno alu){
+    //     alumnos.
+    // }
     public int getNo_Grupo(){
         return no_grupo;
     }
-
-    public void asignarAlumnos(){
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-        System.out.println("---------- Agregar Alumno ----------\n");
-        System.out.print("Nombre: ");
-        String name = sc.nextLine();
-        System.out.println("No.Cuenta: ");
-        String no_c = sc.nextLine();
-        System.out.println("Promedio: ");
-        float promedio = sc.nextFloat();
-        Alumno alu = new Alumno(name, no_c, promedio);
-        alumnos[cont] = alu;
-        cont ++;
-        sc.close();
+    public int getCont(){
+        return cont;
     }
 
     public void Imprimir(){

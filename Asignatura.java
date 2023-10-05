@@ -31,7 +31,7 @@ public class Asignatura {
     }
 
     //Metodo de la clase
-    public static int getCont(){
+    public int getCont(){
         return contAsig;
     }
 
