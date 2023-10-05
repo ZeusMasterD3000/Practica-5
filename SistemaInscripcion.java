@@ -67,17 +67,17 @@ public class SistemaInscripcion {
 
                         if (contAsig > 0){
 
-                            System.out.println("\n--------------- Crear Grupo --------------\n");
+                            System.out.println("\n--------------- Crear Grupo --------------");
 
-                            System.out.println("--------------- Profesores ---------------");
+                            System.out.println("\n--------------- Profesores ---------------\n");
                             for(int j = 0; j < profes.size(); j++){
-                                System.out.print("Profesor "+ (j+1) +" : "+ profes.get(j).getNameP());
+                                System.out.println("Profesor "+ (j+1) +" : "+ profes.get(j).getNameP());
                             }
                             System.out.print("\nElige un profesor: ");
                             opcionMenu = sc.nextInt();
                             prof = profes.get(opcionMenu - 1);
 
-                            System.out.println("\n--------------- Asignaturas ---------------");
+                            System.out.println("\n--------------- Asignaturas ---------------\n");
                             for(int j = 0; j < asignaturas.size(); j++){
                                 System.out.println("Asignatura "+ (j+1) +" : "+ asignaturas.get(j).getNameAsig());
                             }
@@ -85,20 +85,20 @@ public class SistemaInscripcion {
                             opcionMenu = sc.nextInt();
                             asig = asignaturas.get(opcionMenu - 1);
 
-                            System.out.println("\n--------------- Creando Grupo ---------------");
+                            System.out.println("\n--------------- Creando Grupo ---------------\n");
                             System.out.print("Agregar Numero de Grupo: ");
                             numGrupo = sc.nextInt();
                             group = new Grupo(prof, asig, numGrupo);
                             grupos.add(group);
-                            System.out.println("\n... .... ... Grupo Creado Correctamente ... .... ...\n");
+                            System.out.println("\n... .... ... Grupo Creado Correctamente ... .... ...");
                             contGrup ++;
 
                         }else{
-                            System.out.println("... .... ... Falta Agregar la Asignatura ... .... ...");
+                            System.out.println("\n... .... ... Falta Agregar la Asignatura ... .... ...");
                         }
 
                     }else{
-                        System.out.println("... .... ... Falta Agregar el Profesor ... .... ...");
+                        System.out.println("\n... .... ... Falta Agregar el Profesor ... .... ...");
                     }
                     break;
 
@@ -129,7 +129,7 @@ public class SistemaInscripcion {
                         System.out.print("\nNumero de Cuenta: ");
                         noCuenta = sc.nextLine();
                         System.out.println("\nQuiere Agregar el Promedio del alumno?");
-                        System.out.println("1. Si\t\t2.No");
+                        System.out.println("\t1. Si\t\t2.No");
                         System.out.print("Opcion: ");
                         int temp = sc.nextInt();
                         if (temp == 1){
