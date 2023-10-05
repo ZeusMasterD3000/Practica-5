@@ -1,4 +1,5 @@
 import java.util.*;
+import ClasesdelPrograma.*;
 
 public class SistemaInscripcion {
     
@@ -50,7 +51,8 @@ public class SistemaInscripcion {
             System.out.println("2. Crear Profesor");
             System.out.println("3. Crear Alumno");
             System.out.println("4. Crear Asignatura");
-            System.out.println("5. Finalizar Programa");
+            System.out.println("5. Consultar Grupos");
+            System.out.println("6. Salir");
             System.out.print("Opcion: ");
             int op = sc.nextInt();
 
@@ -66,7 +68,7 @@ public class SistemaInscripcion {
 
                             System.out.println("--------------- Profesores ---------------\n");
                             for(int j = 0; j < profes.size(); j++){
-                                System.out.print("\nProfesor "+ j +" : "+ profes.get(j).getNameP());
+                                System.out.print("\nProfesor "+ (j+1) +" : "+ profes.get(j).getNameP());
                             }
                             System.out.print("\nElige un profesor: ");
                             opcionMenu = sc.nextInt();
@@ -74,7 +76,7 @@ public class SistemaInscripcion {
 
                             System.out.println("\n--------------- Asignaturas ---------------");
                             for(int j = 0; j < asignaturas.size(); j++){
-                                System.out.println("Asignatura "+ j +" : "+ asignaturas.get(j).getNameAsig());
+                                System.out.println("Asignatura "+ (j+1) +" : "+ asignaturas.get(j).getNameAsig());
                             }
                             System.out.print("\nElige una asignatura: ");
                             opcionMenu = sc.nextInt();
@@ -84,6 +86,7 @@ public class SistemaInscripcion {
                             System.out.print("Agregar Numero de Grupo: ");
                             numGrupo = sc.nextInt();
                             group = new Grupo(prof, asig, numGrupo);
+                            grupos.add(group);
                             System.out.println("\n... .... ... Grupo Creado Correctamente ... .... ...\n");
                             contGrup ++;
 
@@ -98,6 +101,7 @@ public class SistemaInscripcion {
 
                 case 2:// Crear Profesor
 
+                    sc.nextLine();
                     System.out.println("n--------------- Agregar Profesor ---------------\n");
                     System.out.print("\nNombre: ");
                     nameP = sc.nextLine();
@@ -115,6 +119,7 @@ public class SistemaInscripcion {
 
                     if (contGrup > 0){
 
+                        sc.nextLine();
                         System.out.println("\n--------------- Alumno ---------------");
                         System.out.print("\nNombre: ");
                         nameAl = sc.nextLine();
@@ -144,6 +149,7 @@ public class SistemaInscripcion {
 
                 case 4://Crear Asignatura
 
+                    sc.nextLine();
                     System.out.println("\n--------------- Asignatura ---------------");
                     System.out.print("\nNombre: ");
                     nameA = sc.nextLine();
@@ -158,6 +164,13 @@ public class SistemaInscripcion {
                     break;
 
                 case 5:
+                    System.out.println("\n--------------- Asignaturas ---------------");
+                    for(int j = 0; j < grupos.size(); j++){
+                        System.out.println("Grupo: "+ (j+1));
+                        grupos.get(j).Imprimir();
+                    }
+                    break;
+                case 6:
                     sc.close();
                     return;
             }
