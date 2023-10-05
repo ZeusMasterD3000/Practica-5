@@ -1,5 +1,8 @@
 import java.util.*;
-import ClasesdelPrograma.*;
+import ClasesdelPrograma.Alumno;
+import ClasesdelPrograma.Profesor;
+import ClasesdelPrograma.Asignatura;
+import ClasesdelPrograma.Grupo;
 
 public class SistemaInscripcion {
     
@@ -42,11 +45,11 @@ public class SistemaInscripcion {
         int contAsig = 0;
         int contGrup = 0;
 
-        System.out.println("\n---------- Sistema de Inscripcion ----------\n");
+        System.out.println("\n---------- Sistema de Inscripcion ----------");
 
         do {
 
-            System.out.println("---------- Menu ----------\n");
+            System.out.println("\n---------- Menu ----------\n");
             System.out.println("1. Crear Grupo");
             System.out.println("2. Crear Profesor");
             System.out.println("3. Crear Alumno");
@@ -66,9 +69,9 @@ public class SistemaInscripcion {
 
                             System.out.println("\n--------------- Crear Grupo --------------\n");
 
-                            System.out.println("--------------- Profesores ---------------\n");
+                            System.out.println("--------------- Profesores ---------------");
                             for(int j = 0; j < profes.size(); j++){
-                                System.out.print("\nProfesor "+ (j+1) +" : "+ profes.get(j).getNameP());
+                                System.out.print("Profesor "+ (j+1) +" : "+ profes.get(j).getNameP());
                             }
                             System.out.print("\nElige un profesor: ");
                             opcionMenu = sc.nextInt();
@@ -102,7 +105,7 @@ public class SistemaInscripcion {
                 case 2:// Crear Profesor
 
                     sc.nextLine();
-                    System.out.println("n--------------- Agregar Profesor ---------------\n");
+                    System.out.println("\n--------------- Agregar Profesor ---------------");
                     System.out.print("\nNombre: ");
                     nameP = sc.nextLine();
                     System.out.print("\nCarrera: ");
@@ -125,21 +128,29 @@ public class SistemaInscripcion {
                         nameAl = sc.nextLine();
                         System.out.print("\nNumero de Cuenta: ");
                         noCuenta = sc.nextLine();
-                        System.out.print("\nPromedio: ");
-                        promedio = sc.nextFloat();
-                        alumno = new Alumno(nameAl, noCuenta, promedio);
-                        alumnos.add(alumno);
+                        System.out.println("Quiere Agregar el Promedio del alumno?");
+                        System.out.println("1. Si\t\t2.No");
+                        int temp = sc.nextInt();
+                        if (temp == 1){
+                            System.out.print("\nPromedio: ");
+                            promedio = sc.nextFloat();
+                            alumno = new Alumno(nameAl, noCuenta, promedio);
+                            alumnos.add(alumno);
+                        }else{
+                            alumno = new Alumno(nameAl, noCuenta);
+                            alumnos.add(alumno);
+                        }
                         
-                        System.out.println("\n--------------- Grupos ---------------");
+                        System.out.println("\n--------------- Grupos ---------------\n");
                         for(int j = 0; j < asignaturas.size(); j++){
                             System.out.println("---------- Opcion "+ (j+1) +" ----------");
                             System.out.println("Grupo: "+ grupos.get(j).getNo_Grupo());
                             System.out.println("Materia: "+ grupos.get(j).getAsignatura().getNameAsig());
                             System.out.println("Profesor: "+ grupos.get(j).getProfesor().getNameP());
                         }
-                        System.out.println("Opcion: ");
+                        System.out.print("Opcion: ");
                         opcionMenu = sc.nextInt();
-                        group = grupos.get(opcionMenu);
+                        group = grupos.get(opcionMenu - 1);
                         group.setAlumno(alumno);
 
                     }else{
@@ -163,18 +174,21 @@ public class SistemaInscripcion {
 
                     break;
 
-                case 5:
-                    System.out.println("\n--------------- Asignaturas ---------------");
+                case 5: // Ver Grupos
+
+                    System.out.println("\n--------------- Grupos ---------------");
                     for(int j = 0; j < grupos.size(); j++){
                         System.out.println("Grupo: "+ (j+1));
                         grupos.get(j).Imprimir();
                     }
                     break;
+
                 case 6:
+
                     sc.close();
                     return;
             }
 
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 }
