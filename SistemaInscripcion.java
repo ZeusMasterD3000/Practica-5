@@ -175,6 +175,6 @@ public class SistemaInscripcion {
                     return;
             }
 
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 }
