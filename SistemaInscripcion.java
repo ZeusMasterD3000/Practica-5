@@ -85,7 +85,7 @@ public class SistemaInscripcion {
                             opcionMenu = sc.nextInt();
                             asig = asignaturas.get(opcionMenu - 1);
 
-                            System.out.println("\n--------------- Creando Grupo ---------------\n");
+                            System.out.println("\n--------------- Creando Grupo ---------------");
                             System.out.print("Agregar Numero de Grupo: ");
                             numGrupo = sc.nextInt();
                             group = new Grupo(prof, asig, numGrupo);
@@ -128,8 +128,9 @@ public class SistemaInscripcion {
                         nameAl = sc.nextLine();
                         System.out.print("\nNumero de Cuenta: ");
                         noCuenta = sc.nextLine();
-                        System.out.println("Quiere Agregar el Promedio del alumno?");
+                        System.out.println("\nQuiere Agregar el Promedio del alumno?");
                         System.out.println("1. Si\t\t2.No");
+                        System.out.print("Opcion: ");
                         int temp = sc.nextInt();
                         if (temp == 1){
                             System.out.print("\nPromedio: ");
@@ -148,7 +149,7 @@ public class SistemaInscripcion {
                             System.out.println("Materia: "+ grupos.get(j).getAsignatura().getNameAsig());
                             System.out.println("Profesor: "+ grupos.get(j).getProfesor().getNameP());
                         }
-                        System.out.print("Opcion: ");
+                        System.out.print("\nOpcion: ");
                         opcionMenu = sc.nextInt();
                         group = grupos.get(opcionMenu - 1);
                         group.setAlumno(alumno);
@@ -176,9 +177,7 @@ public class SistemaInscripcion {
 
                 case 5: 
 
-                    System.out.println("\n--------------- Grupos ---------------");
                     for(int j = 0; j < grupos.size(); j++){
-                        System.out.println("Grupo: "+ (j+1));
                         grupos.get(j).Imprimir();
                     }
                     break;

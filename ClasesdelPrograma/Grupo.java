@@ -40,7 +40,7 @@ public class Grupo {
     }
 
     public void Imprimir(){
-        System.out.println("---------- Datos del Grupo "+ getNo_Grupo() +" ----------\n");
+        System.out.println("\n-------------- Datos del Grupo "+ getNo_Grupo() +" --------------");
         materia.ImprimirDatos();
         profe.ImprimirDatos();
         int i = 1;

@@ -33,7 +33,7 @@ public class Profesor {
     }
 
     public void ImprimirDatos(){
-        System.out.println("---------- Datos Profesor ---------\n");
+        System.out.println("\n---------- Datos Profesor ---------");
         System.out.println("Nombre: "+ getNameP());
         System.out.println("Carrera: "+ getCarreraP());
         System.out.println("Horario: "+ getHorario());
