@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Grupo {
     
     // Atributos o miembros de clase
     private Asignatura materia;
     private Profesor profe;
-    private Alumno[] alumnos = new Alumno[5];
+    private ArrayList<Alumno> alumnos = new ArrayList<>();
     private int no_grupo;
     static int cont = 0;
 
@@ -22,12 +24,16 @@ public class Grupo {
     public Profesor getProfesor(){
         return profe;
     }
-    public Alumno[] getAlumnos(){
+    public ArrayList<Alumno> getAlumnos(){
         return alumnos;
     }
-    // public void setAlumno(Alumno alu){
-    //     alumnos.
-    // }
+    public void setAlumno(Alumno alu){
+        if (alumnos.size() < 6){
+            alumnos.add(alu);
+        }else{
+            System.out.println("\n... .... ... Cupo Lleno ... .... ...\n");
+        }
+    }
     public int getNo_Grupo(){
         return no_grupo;
     }
