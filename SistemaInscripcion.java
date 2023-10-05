@@ -174,7 +174,7 @@ public class SistemaInscripcion {
 
                     break;
 
-                case 5: // Ver Grupos
+                case 5: 
 
                     System.out.println("\n--------------- Grupos ---------------");
                     for(int j = 0; j < grupos.size(); j++){
